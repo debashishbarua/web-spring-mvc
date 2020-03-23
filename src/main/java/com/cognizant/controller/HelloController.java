@@ -1,7 +1,5 @@
 package com.cognizant.controller;
 
-import java.util.List;
-
 import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -9,7 +7,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import com.cognizant.model.Student;
 import com.cognizant.service.StudentService;
 
 @Controller
@@ -38,15 +35,15 @@ public class HelloController {
 
 		return "hi";
 	}
-
-	@RequestMapping(value = "getAll", method = RequestMethod.GET)
-	public String getAll() {
-
-		List<Student> list = studentService.getAll();
-		
-		System.out.println("list " + list);
-
-		return "display";
-	}
+	/*
+	 * @RequestMapping(value = "getAll", method = RequestMethod.GET) public
+	 * String getAll() {
+	 * 
+	 * List<Student> list = studentService.getAll();
+	 * 
+	 * System.out.println("list " + list);
+	 * 
+	 * return "display"; }
+	 */
 
 }
